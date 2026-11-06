@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osteria Borghese: Cucina Ticinese a Locarno</title>
+<meta name="description" content="Osteria Borghese, cucina italiana e ticinese nella Città Vecchia di Locarno. Carta breve e curata, cortile interno a lume di candela, Merlot ticinese. Via Borghese 20, 6600 Locarno.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#menu" data-i18n="skip">Vai alla carta</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="top">
+  <a class="wordmark" href="#top" aria-label="Osteria Borghese">
+    <span class="wordmark-main">Osteria Borghese</span>
+    <span class="wordmark-sub" data-i18n="wordmarkSub">Cucina ticinese · Locarno</span>
+  </a>
+  <nav class="nav-links" aria-label="Navigazione principale">
+    <a href="#signatures" data-i18n="navSig">I piatti</a>
+    <a href="#menu" data-i18n="navMenu">La carta</a>
+    <a href="#story" data-i18n="navStory">La storia</a>
+    <a href="#evening" data-i18n="navEvening">La sera</a>
+    <a href="#visit" data-i18n="navVisit">Visita</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="lang-toggle" role="group" aria-label="Language / Lingua">
+      <button type="button" class="lang-btn is-active" data-lang="it" aria-pressed="true">IT</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-nav" href="tel:+41917510498">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+41 91 751 04 98</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Osteria Borghese">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" id="heroImg" src="assets/hero-courtyard.webp" alt="" width="1920" height="1280" fetchpriority="high">
+    <div class="hero-shade"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badges reveal">
+      <span class="badge badge-rating">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span data-i18n="badgeRating">4,6 · 281 recensioni Google</span>
+      </span>
+      <span class="badge badge-cuisine">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        <span data-i18n="badgeCuisine">Cucina italiana e ticinese</span>
+      </span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line reveal" data-i18n="h1a">Cucina</span>
+      <span class="line reveal" data-i18n="h1b">ticinese</span>
+      <span class="line reveal"><span data-i18n="h1c">a Locarno</span><span class="title-dot">.</span></span>
+    </h1>
+    <p class="hero-rotate reveal" aria-live="off">
+      <span data-i18n="heroRotatePrefix">Stasera in tavola:</span>
+      <span class="rotate-word" id="rotateWord">Ravioli al basilico</span><span data-i18n="heroRotateSuffix">.</span>
+    </p>
+    <p class="hero-lede reveal" data-i18n="heroLede">Una carta breve e curata, piatti preparati al momento con ingredienti scelti e un cortile interno dove la cena va a lume di candela, in una via tranquilla della Città Vecchia.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="#menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+        <span data-i18n="ctaMenu">Guarda la carta</span>
+      </a>
+      <a class="btn btn-ghost" href="tel:+41917510498">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+        <span data-i18n="ctaReserve">Prenota un tavolo</span>
+      </a>
+      <a class="btn btn-ghost" href="tel:+41917510498">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="ctaCall">Chiamaci</span>
+      </a>
+    </div>
+    <p class="hero-note reveal" data-i18n="heroNote">Sala piccola e cortile ambito: la prenotazione per telefono è consigliata.</p>
+    <div class="hero-facts reveal">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Via Borghese 20, 6600 Locarno
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span data-i18n="heroFactHours">Da martedì a domenica 16:30 a 23:00, lunedì chiuso</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCH DIVIDER ============ -->
+<div class="arch" aria-hidden="true">
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+
+<!-- ============ SIGNATURES ============ -->
+<section class="section section-cream" id="signatures">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="sigTitle">I piatti per cui si torna</h2>
+      <p class="section-sub" data-i18n="sigSub">Quattro piatti che tornano nelle recensioni e sulle tavole del cortile: la pasta fatta in casa, le lunghe cotture e il dolce che chiude la serata.</p>
+    </header>
+    <div class="sig-grid">
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/ravioli.webp" alt="Ravioli freschi al basilico su un piatto rustico in ceramica" width="1920" height="1280" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+          <h3 data-i18n="sig1Name">Ravioli al basilico</h3>
+          <p data-i18n="sig1Desc">Pasta fresca fatta in casa, con basilico e ingredienti scelti: il primo che gli ospiti citano più spesso.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/ossobuco.webp" alt="Ossobuco brasato con la sua salsa e la gremolata" width="1920" height="1280" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+          <h3 data-i18n="sig2Name">Ossobuco</h3>
+          <p data-i18n="sig2Desc">La lunga cottura della tradizione, con la sua salsa ricca e il midollo: un piatto da serata lenta.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/parmigiana.webp" alt="Parmigiana di melanzane gratinata in un tegame di terracotta" width="1920" height="1280" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+          <h3 data-i18n="sig3Name">Parmigiana di melanzane</h3>
+          <p data-i18n="sig3Desc">Melanzane, pomodoro e formaggio gratinati al forno: il piatto vegetariano che convince tutti.</p>
+        </div>
+      </article>
+      <article class="sig-card reveal">
+        <div class="sig-media"><img src="assets/tiramisu.webp" alt="Fetta di tiramisù spolverata di cacao, con una tazzina di espresso" width="1920" height="1280" loading="lazy"></div>
+        <div class="sig-body">
+          <div class="sig-tags"><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+          <h3 data-i18n="sig4Name">Tiramisù</h3>
+          <p data-i18n="sig4Desc">Il finale classico, fatto in casa, con il caffè: la chiusura giusta per la cena in cortile.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="sig-more reveal">
+      <h3 data-i18n="sigMoreTitle">Altri piatti amati</h3>
+      <ul class="sig-list">
+        <li>
+          <div class="sig-list-item-top"><h4 data-i18n="sl1Name">Entrecôte con patate al forno</h4></div>
+          <p data-i18n="sl1Desc">Carne alla griglia e patate al forno: semplice, abbondante, da condividere o no.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4 data-i18n="sl2Name">Ravioli all'arancia</h4></div>
+          <p data-i18n="sl2Desc">La variante profumata dei nostri ravioli, con un tocco di arancia.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4 data-i18n="sl3Name">Insalata mista della casa</h4><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+          <p data-i18n="sl3Desc">Generosa, con la salsa fatta in casa che gli ospiti lodano sempre.</p>
+        </li>
+        <li>
+          <div class="sig-list-item-top"><h4 data-i18n="sl4Name">Gelato alla grappa</h4></div>
+          <p data-i18n="sl4Desc">Per chiudere con carattere: il gelato alla grappa, intenso e freddo.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="section section-night" id="menu">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="menuTitle">Una carta breve, fatta bene</h2>
+      <p class="section-sub section-sub-light" data-i18n="menuSub">Pochi piatti, preparati al momento con ingredienti di qualità. La carta segue la stagione e il mercato: qualcosa può cambiare, e qualcosa può finire in serata, come in ogni piccola osteria.</p>
+    </header>
+
+    <div class="menu-grid">
+      <div class="menu-col reveal">
+        <h3 class="menu-cat" data-i18n="catStarters">Antipasti e insalate</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSaladName">Insalata mista</h4><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+            <p data-i18n="mSalad">Insalata mista generosa con la salsa della casa, fatta in casa.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mBruschettaName">Bruschetta al pomodoro</h4><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+            <p data-i18n="mBruschetta">Pane tostato, pomodoro e olio buono: l'inizio semplice dell'osteria.</p>
+          </li>
+        </ul>
+
+        <h3 class="menu-cat menu-cat-spaced" data-i18n="catPrimi">Primi</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mRavioliBName">Ravioli al basilico</h4><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+            <p data-i18n="mRavioliB">Pasta fresca fatta in casa, con basilico e ingredienti scelti: il primo che gli ospiti citano più spesso.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mRavioliAName">Ravioli all'arancia</h4></div>
+            <p data-i18n="mRavioliA">La variante profumata dei nostri ravioli, con un tocco di arancia.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mPomodoroName">Pasta al pomodoro</h4><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+            <p data-i18n="mPomodoro">Sugo di pomodoro e pasta: il classico semplice che non manca mai.</p>
+          </li>
+        </ul>
+
+        <h3 class="menu-cat menu-cat-spaced" data-i18n="catDolci">Dolci</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mTiraName">Tiramisù</h4><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+            <p data-i18n="mTira">Il finale classico, fatto in casa, con il caffè: la chiusura giusta per la cena in cortile.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mGelatoName">Gelato alla grappa</h4></div>
+            <p data-i18n="mGelato">Per chiudere con carattere: il gelato alla grappa, intenso e freddo.</p>
+          </li>
+        </ul>
+        <div class="menu-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <p data-i18n="menuNote">Su questa carta non mettiamo i prezzi: cambiano con la stagione e il mercato. Chiamaci per i prezzi e per i piatti del giorno.</p>
+        </div>
+        <a class="btn btn-primary btn-block" href="tel:+41917510498">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="menuCta">Prenota per telefono</span>
+        </a>
+      </div>
+
+      <div class="menu-col reveal">
+        <h3 class="menu-cat" data-i18n="catSecondi">Secondi</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mOssoName">Ossobuco</h4><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+            <p data-i18n="mOsso">La lunga cottura della tradizione, con la sua salsa ricca e il midollo: un piatto da serata lenta.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mEntreName">Entrecôte con patate al forno</h4></div>
+            <p data-i18n="mEntre">Carne alla griglia e patate al forno: semplice, abbondante, da condividere o no.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mParmName">Parmigiana di melanzane</h4><span class="tag tag-veg" data-i18n="tagVeg">Vegetariano</span></div>
+            <p data-i18n="mParm">Melanzane, pomodoro e formaggio gratinati al forno: il piatto vegetariano che convince tutti.</p>
+          </li>
+        </ul>
+
+        <h3 class="menu-cat menu-cat-spaced" data-i18n="catDrinks">Da bere</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mMerlotName">Merlot del Ticino</h4><span class="tag tag-fav" data-i18n="tagFav">Il più amato</span></div>
+            <p data-i18n="mMerlot">Il vino del Ticino, in rosso e nella sua versione in bianco, come vuole la tradizione locale.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mWineName">Vini selezionati</h4></div>
+            <p data-i18n="mWine">Poche etichette, scelte bene: la carta dei vini è corta come quella dei piatti.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mLimonName">Limoncello della casa</h4></div>
+            <p data-i18n="mLimon">Il digestivo fatto in casa, servito freddo, per chiudere la serata.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mSpritzName">Aperol Spritz</h4></div>
+            <p data-i18n="mSpritz">L'aperitivo dalle 16:30, in cortile o in sala.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-top"><h4 data-i18n="mCaffeName">Caffè</h4></div>
+            <p data-i18n="mCaffe">Un caffè fatto bene, per finire.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section section-cream" id="story">
+  <div class="wrap story-grid">
+    <div class="story-card reveal">
+      <div class="story-media"><img src="assets/interior.webp" alt="Sala dell'osteria con tavoli in legno, candele e uno scaffale di vini" width="1920" height="1280" loading="lazy"></div>
+      <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <dl class="fact-list">
+        <div class="fact-row"><dt data-i18n="factMgmtLbl">Gestione</dt><dd data-i18n="factMgmtVal">Da Ghilardi, dal 2025</dd></div>
+        <div class="fact-row"><dt data-i18n="factMenuLbl">La carta</dt><dd data-i18n="factMenuVal">Breve e curata</dd></div>
+        <div class="fact-row"><dt data-i18n="factSeatsLbl">I posti</dt><dd data-i18n="factSeatsVal">Sala e cortile interno</dd></div>
+        <div class="fact-row"><dt data-i18n="factHoursLbl">Orari</dt><dd data-i18n="factHoursVal">Solo la sera</dd></div>
+      </dl>
+      <p class="story-card-note" data-i18n="storyCardNote">Un'osteria storica della Città Vecchia, con una nuova gestione dal 2025.</p>
+    </div>
+    <div class="story-copy">
+      <h2 class="reveal" data-i18n="storyTitle">Un'osteria di sempre, una gestione nuova</h2>
+      <p class="reveal" data-i18n="storyP1">In Via Borghese 20, nella Città Vecchia di Locarno, questa osteria serve la cena da anni ed è un indirizzo che i locarnesi si passano a voce. Dal novembre 2025 è passata alla gestione Ghilardi, che l'ha rilevata con un'idea precisa.</p>
+      <p class="reveal" data-i18n="storyP2">L'idea, nelle parole della gestione, è una cucina più essenziale e curata: pochi piatti, preparati al momento, con ingredienti di qualità. Una carta pensata non per i turisti, ma per chi vuole mangiare bene.</p>
+      <p class="reveal" data-i18n="storyP3">Dentro c'è la sala dell'osteria; fuori, un cortile interno dove la cena va a lume di candela. Le porzioni sono generose e l'accoglienza è quella di casa: ci si siede, si ordina un Merlot ticinese e la serata prende il suo tempo.</p>
+      <ul class="story-chips reveal">
+        <li data-i18n="chip1">Nuova gestione dal 2025</li>
+        <li data-i18n="chip2">Cortile interno</li>
+        <li data-i18n="chip3">Carta breve e curata</li>
+        <li data-i18n="chip4">Merlot ticinese</li>
+      </ul>
+      <div class="story-rating reveal">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <p><strong>4,6</strong> <span data-i18n="storyRating">stelle da 281 recensioni Google. Gli ospiti lodano gli ingredienti di qualità, le porzioni generose e l'accoglienza calorosa.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="section section-paper" id="trust">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="trustTitle">Buono a sapersi, prima di venire</h2>
+    </header>
+    <div class="trust-grid">
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 data-i18n="trust1Title">4,6 stelle su Google</h3>
+        <p data-i18n="trust1Desc">281 recensioni raccontano la stessa cosa: ingredienti di qualità, piatti preparati al momento e porzioni generose.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        </div>
+        <h3 data-i18n="trust2Title">Il cortile interno</h3>
+        <p data-i18n="trust2Desc">Quando il tempo lo permette, la cena è nel cortile interno, a lume di candela: il posto più amato dell'osteria.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 data-i18n="trust3Title">Prenotazione consigliata</h3>
+        <p data-i18n="trust3Desc">La sala è piccola e il cortile ha pochi tavoli. La prenotazione si fa per telefono, senza sistemi e senza attese.</p>
+      </article>
+      <article class="trust-card reveal">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <h3 data-i18n="trust4Title">Opzioni vegetariane</h3>
+        <p data-i18n="trust4Desc">In carta ci sono piatti vegetariani come la parmigiana e le bruschette, e la cucina adatta volentieri i piatti quando può.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENING ============ -->
+<section class="section section-wine" id="evening">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="eveTitle">La sera in Città Vecchia</h2>
+      <p class="section-sub section-sub-light" data-i18n="eveSub">L'osteria apre quando la città si accende: dalle 16:30, dal martedì alla domenica. Il lunedì si riposa.</p>
+    </header>
+    <div class="eve-grid">
+      <article class="eve-card reveal">
+        <h3 data-i18n="bkTitle">Prenota il tuo tavolo</h3>
+        <ol class="cc-steps">
+          <li>
+            <span class="cc-num">1</span>
+            <div><strong data-i18n="bk1Title">Scegli la sera</strong><p data-i18n="bk1Desc">Da martedì a domenica, dalle 16:30: in cortile quando è stagione, in sala nelle sere fresche.</p></div>
+          </li>
+          <li>
+            <span class="cc-num">2</span>
+            <div><strong data-i18n="bk2Title">Chiamaci</strong><p data-i18n="bk2Desc">Una breve chiamata basta: concordiamo insieme giorno e ora.</p></div>
+          </li>
+          <li>
+            <span class="cc-num">3</span>
+            <div><strong data-i18n="bk3Title">Vieni in Via Borghese</strong><p data-i18n="bk3Desc">Ti aspettiamo in Via Borghese 20, nella Città Vecchia, per la cena.</p></div>
+          </li>
+        </ol>
+        <a class="btn btn-light" href="tel:+41917510498">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="bkCta">Chiama ora</span>
+        </a>
+      </article>
+      <article class="eve-card reveal">
+        <h3 data-i18n="wineTitle">Il vino della serata</h3>
+        <p data-i18n="wineDesc">La carta dei vini è corta come quella dei piatti: poche etichette, scelte bene, con il Merlot del Ticino in primo piano, in rosso e nella sua versione in bianco. E per chiudere, il limoncello fatto in casa.</p>
+        <div class="dl-actions">
+          <a class="btn btn-light" href="#menu"><span data-i18n="eveMenuBtn">Vedi la carta</span></a>
+          <a class="btn btn-outline-light" href="tel:+41917510498"><span>+41 91 751 04 98</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="section section-cream" id="visit">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <h2 data-i18n="visitTitle">In Città Vecchia, ti aspettiamo</h2>
+    </header>
+    <div class="visit-grid">
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitAddrTitle">Indirizzo e contatti</h3>
+        <p class="visit-addr">Osteria Borghese<br>Via Borghese 20<br>6600 Locarno</p>
+        <p class="visit-line"><span data-i18n="visitPhoneLabel">Telefono:</span> <a href="tel:+41917510498">+41 91 751 04 98</a></p>
+        <div class="visit-actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Borghese%2020%2C%206600%20Locarno" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span data-i18n="visitDirections">Indicazioni</span>
+          </a>
+          <a class="btn btn-ghost-dark" href="https://www.facebook.com/OsteriaBorgheseLocarno/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/OsteriaBorgheseLocarno/" target="_blank" rel="noopener" aria-label="Facebook Osteria Borghese">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitHoursTitle">Orari di apertura</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr><th scope="row" data-i18n="dTueSun">Da martedì a domenica</th><td data-i18n="hTueSun">16:30 a 23:00</td></tr>
+            <tr><th scope="row" data-i18n="dMon">Lunedì</th><td data-i18n="dClosed">Chiuso</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note" data-i18n="hoursNote">Orari secondo il profilo Google. Possono variare: per sicurezza, chiamaci.</p>
+        <p class="visit-service" data-i18n="visitService">Si cena in sala o nel cortile interno. I cani sono i benvenuti.</p>
+      </div>
+      <div class="visit-card reveal">
+        <h3 data-i18n="visitTravelTitle">Come arrivare</h3>
+        <ul class="travel-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p><strong>Piazza Grande</strong>, <span data-i18n="travelPiazza">la piazza e la Città Vecchia sono a pochi passi: l'osteria è in una via tranquilla, a poche decine di metri dal centro.</span></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16"/><path d="M8 20l1.5-4M16 20l-1.5-4"/><circle cx="8.5" cy="13.5" r=".5"/><circle cx="15.5" cy="13.5" r=".5"/></svg>
+            <p><strong>Stazione di Locarno</strong>, <span data-i18n="travelStation">la stazione è a pochi minuti a piedi, comoda per chi arriva in treno sul Lago Maggiore.</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-mark">Osteria Borghese</p>
+      <p class="footer-sub" data-i18n="footerSub">Cucina ticinese · Via Borghese 20, 6600 Locarno</p>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+41917510498">+41 91 751 04 98</a>
+      <a href="https://www.facebook.com/OsteriaBorgheseLocarno/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Borghese%2020%2C%206600%20Locarno" target="_blank" rel="noopener">Google Maps</a>
+      <a href="#top" data-i18n="footerTop">Torna su</a>
+    </div>
+    <p class="footer-note" data-i18n="footerNote">4,6 stelle da 281 recensioni Google, aperto la sera, lunedì chiuso</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<nav class="mobile-bar" aria-label="Azioni rapide">
+  <a href="tel:+41917510498">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="barCall">Chiamaci</span>
+  </a>
+  <a href="tel:+41917510498">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+    <span data-i18n="barReserve">Prenota</span>
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Borghese%2020%2C%206600%20Locarno" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+    <span data-i18n="barDir">Indicazioni</span>
+  </a>
+  <a href="#menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+    <span data-i18n="barMenu">La carta</span>
+  </a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
